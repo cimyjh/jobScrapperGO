@@ -1,4 +1,4 @@
-package main
+package scrapper
 
 import (
 	"encoding/csv"
@@ -24,6 +24,7 @@ var baseURL string = "https://kr.indeed.com/jobs?q=spring&limit=50"
 
 func main() {
 	var jobs []extractedJob
+
 	c := make(chan []extractedJob)
 
 	totalPages := getPages()
